@@ -54,6 +54,7 @@ The goal is not to become a full-time engineer, but to be a **software-fluent pr
 ### Beyond work
 
 I also believe that learning systems extend beyond screens:
+- **Weightlifting** — power, precision, focus
 - **Kitesurfing** — reading conditions, risk, and flow
 - **Inline skating** — balance, repetition, incremental progress
 - **Sauna & cold exposure** — resilience, recovery, and mental clarity
