@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Music — Carmen Lozano Abellán</title>
+
+  <meta name="description" content="Musical background of Carmen Lozano Abellán. Double bass training, orchestral experience, and active participation in university orchestra." />
+  <meta name="author" content="Carmen Lozano Abellán" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f1216;
+      --card: #151922;
+      --text: #e9edf5;
+      --muted: #a8b0c0;
+      --accent: #b794f4;
+      --link: #7aa2ff;
+      --border: #222838;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(15,18,22,0.85);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand { font-weight: 700; }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 760px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--card), #121621);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .muted { color: var(--muted); }
+
+    footer {
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 860px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="brand">Carmen Lozano Abellán</div>
+    <div>
+      <a href="index_blue.html">← Back to profile</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="container hero">
+    <h1>Music</h1>
+    <p>
+      Music has been a constant thread throughout my life — a discipline that shaped how I listen,
+      collaborate, and build over time. My background as a double bass player runs in parallel with
+      my professional career, reinforcing structure, patience, and collective performance.
+    </p>
+  </section>
+  <!-- PHOTOS -->
+  <section class="container">
+    <div class="grid grid-2">
+      <div class="card">
+        <img
+                src="photos/Carmen_tocando.jpeg"
+                alt="Orchestral performance"
+                style="
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            object-fit: cover;
+            aspect-ratio: 2 / 3;
+          "
+        />
+      </div>
+
+      <div class="card">
+        <img
+                src="photos/Carmen_atril.jpeg"
+                alt="Double bass rehearsal"
+                style="
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            object-fit: cover;
+            aspect-ratio: 2 / 3;
+          "
+        />
+      </div>
+    </div>
+  </section>
+  <!-- EDUCATION -->
+  <section class="container grid grid-2">
+    <div class="card">
+      <h2 class="section-title">Formal training</h2>
+      <p>
+        I completed my professional music education at the
+        <strong>Conservatorio Profesional de Música Rodolfo Halffter</strong>,
+        where I trained as a double bass player.
+      </p>
+      <p class="muted">
+        Years of classical training grounded me in technical rigor, ensemble discipline,
+        and the long-term value of deliberate practice.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Orchestral experience</h2>
+      <p>
+        During my formative years, I performed with several youth and training orchestras,
+        including the <strong>Joven Orquesta de la Comunidad de Madrid (JORCAM)</strong>.
+      </p>
+      <p class="muted">
+        Playing in large orchestral settings taught me how individual excellence only matters
+        when it serves the collective result.
+      </p>
+    </div>
+  </section>
+
+  <!-- JAZZ & OTHER PROJECTS -->
+  <section class="container grid grid-2">
+    <div class="card">
+      <h2 class="section-title">Jazz & big bands</h2>
+      <p>
+        Alongside my classical training, I have also played in jazz big bands,
+        with a special focus on the
+        <strong>Big Band of the Conservatorio Profesional de Música Rodolfo Halffter</strong>.
+      </p>
+      <p class="muted">
+        Jazz introduced a different musical logic: groove, flexibility,
+        active listening, and real-time decision making inside a collective structure.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Electric bass explorations</h2>
+      <p>
+        I have also explored the <strong>electric bass</strong> in small group settings,
+        experimenting with styles outside the classical and orchestral world.
+      </p>
+      <p class="muted">
+        These projects were short-lived, but valuable — spaces for curiosity,
+        stylistic contrast, and learning by doing.
+      </p>
+    </div>
+  </section>
+
+  <!-- CURRENT -->
+  <section class="container">
+    <div class="card">
+      <h2 class="section-title">Current involvement</h2>
+      <p>
+        I am currently an active member of the
+        <strong>Orquesta de la Universidad Carlos III de Madrid</strong>,
+        combining musical practice with my professional life.
+      </p>
+      <p class="muted">
+        Music remains a living practice for me — not a closed chapter,
+        but a space for focus, listening, and shared creation.
+      </p>
+    </div>
+  </section>
+
+  <!-- WHY MUSIC -->
+  <section class="container">
+    <div class="card">
+      <h2 class="section-title">Why music still matters</h2>
+      <p>
+        Music has deeply influenced how I approach work and leadership:
+        timing, structure, adaptability, and trust.
+        An orchestra functions without ego, under a shared direction,
+        and with absolute attention to context.
+      </p>
+      <p class="muted">
+        The same principles apply when building products, teams, or communities.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <small>© <span id="year"></span> Carmen Lozano Abellán</small>
+    <small>Music · Discipline · Collective performance</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carmen Lozano Abellán — Product, Coffee & Music</title>
+  <meta name="description" content="Product Manager in digital health and molecular imaging. Co-owner of a specialty coffee shop in Madrid. Professional double bass player. Projects blending science, business, and art." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f1216;
+      --card: #151922;
+      --text: #e9edf5;
+      --muted: #a8b0c0;
+      --accent: #4fd1c5;
+      --accent-2: #b794f4;
+      --link: #7aa2ff;
+      --border: #222838;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      position: sticky; top: 0; backdrop-filter: saturate(180%) blur(8px);
+      background: rgba(15,18,22,0.75); border-bottom: 1px solid var(--border); z-index: 10;
+    }
+    .nav {
+      max-width: 1080px; margin: 0 auto; padding: 0.8rem 1rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand { font-weight: 700; letter-spacing: 0.2px; }
+    .menu { display: flex; gap: 1rem; font-weight: 600; }
+    .menu a { color: var(--text); opacity: 0.9; }
+    .menu a:hover { opacity: 1; color: var(--accent); }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 2rem 1rem; }
+    .hero {
+      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 2rem; align-items: center; padding-top: 2rem; padding-bottom: 1rem;
+    }
+    .hero h1 { font-size: clamp(1.8rem, 3.6vw, 3rem); margin: 0 0 0.75rem; line-height: 1.1; }
+    .hero p { color: var(--muted); font-size: clamp(1rem, 2vw, 1.125rem); margin: 0 0 1rem; }
+    .badge { display: inline-block; padding: 0.35rem 0.7rem; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); margin-right: 0.5rem; font-size: 0.9rem; }
+    .cta { display: flex; gap: 0.8rem; margin-top: 1rem; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1rem; border-radius: 10px; border: 1px solid var(--border);
+      background: linear-gradient(180deg, #1a1f2c, #121621); color: var(--text); font-weight: 600;
+    }
+    .btn:hover { border-color: var(--accent); color: var(--accent); }
+    .card {
+      background: linear-gradient(180deg, var(--card), #121621); border: 1px solid var(--border); border-radius: 14px; padding: 1.2rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .section-title { font-size: 1.4rem; margin: 2.5rem 0 1rem; font-weight: 700; }
+    .muted { color: var(--muted); }
+    .list { display: grid; gap: 0.8rem; }
+    .item h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .item p { margin: 0; color: var(--muted); }
+    .tag {
+      display: inline-block; background: #1e2432; border: 1px solid var(--border);
+      color: var(--muted); font-size: 0.8rem; padding: 0.25rem 0.5rem; border-radius: 6px; margin-right: 0.4rem; margin-top: 0.4rem;
+    }
+
+    footer { border-top: 1px solid var(--border); }
+    .footer-inner { max-width: 1080px; margin: 0 auto; padding: 2rem 1rem; display: grid; gap: 0.8rem; color: var(--muted); }
+    .social { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+    .social a { border: 1px solid var(--border); background: #1a1f2c; padding: 0.5rem 0.8rem; border-radius: 8px; color: var(--text); }
+    .social a:hover { color: var(--accent-2); border-color: var(--accent-2); }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .menu { display: none; }
+    }
+    .hero-image {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 14px;
+    }
+
+  </style>
+  <style>
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+    }
+
+    .tab-button {
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-weight: 600;
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+
+    .tab-button.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+
+</head>
+<meta name="author" content="Carmen Lozano Abellán">
+<meta name="keywords" content="Product Manager, Digital Health, Molecular Imaging, Biotech, Specialty Coffee, Madrid, Business Leadership">
+<link rel="canonical" href="https://TU_USUARIO.github.io/">
+
+<body>
+<header>
+  <nav class="nav" aria-label="Primary">
+    <div class="brand">Carmen Lozano Abellán</div>
+    <div class="menu">
+      <a href="resume.html">Resume</a>
+      <a href="#projects">Projects</a>
+      <a href="coffee.html">Coffee</a>
+      <a href="music.html">Music</a>
+      <a href="travel.html">Travel</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="container hero" id="home">
+    <div>
+      <span class="badge">Product · Coffee · Music</span>
+      <h1>Building science-driven products that scale trust, adoption, and business impact in a fast evolving world</h1>
+      <p>
+        Innovative and business‑oriented Product Manager with 10+ years of international experience in digital health, molecular imaging, and medical devices.
+        Co‑owner of a specialty coffee shop in Madrid and professional double bass player.
+      </p>
+      <div class="cta">
+        <a class="btn" href="#projects">Explore projects</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="card hero-image">
+      <img src="photos/Carmen_tea.jpeg" alt="Carmen Lozano" />
+        </div>
+        <div class="item">
+          <h3>Entrepreneurship & specialty coffee</h3>
+          <p>Customer experience, community, and operations in a specialty coffee environment.</p>
+          <div>
+            <span class="tag">Customer experience</span>
+            <span class="tag">Operations</span>
+            <span class="tag">Community</span>
+          </div>
+        </div>
+        <div class="item">
+          <h3>Music & creativity</h3>
+          <p>Professional double bass background, blending structure with improvisation and collaboration.</p>
+          <div>
+            <span class="tag">Double bass</span>
+            <span class="tag">Performance</span>
+            <span class="tag">Creativity</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="about" aria-labelledby="about-title">
+    <h2 class="section-title" id="about-title">About me</h2>
+    <div class="grid">
+      <div class="card">
+        <p>
+          I am a Product Manager who sees the world through possibilities and connections. I lead cross‑functional teams to deliver
+          measurable impact, aligning scientific innovation with commercial objectives. Recognized as passionate, energetic, and open‑minded,
+          I focus on creating value for customers while strengthening market positioning.
+        </p>
+      </div>
+      <div class="card">
+        <p>
+          Highlights: global software launches (Image Integrity Checker, ImageQuant TL v11), OEM partnerships, pricing strategy, and
+          quality oversight across hardware and software. Fluent in Spanish and English; intermediate German.
+        </p>
+      </div>
+      <div class="card">
+        <p>
+          Outside of product, I co‑run a specialty coffee shop in Madrid and perform as a double bass player. That mix keeps me grounded:
+          rigorous thinking, craft, and community.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="Drivers">
+    <h2 class="section-title" id="drivers-title">My professional drivers</h2>
+    <div class="container" id="biotech">
+      <div class="grid">
+        <div class="card">
+          <h3>Digital health & biotech</h3>
+          <p>
+            Product leadership in molecular imaging, digital health software, and medical devices,
+            bridging scientific innovation with commercial strategy.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Business strategy</h3>
+          <p>
+            Pricing, go-to-market, lifecycle management, and OEM partnerships in global biotech markets.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Impact</h3>
+          <p>
+            Products that improve trust, compliance, and adoption in scientific and clinical environments.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coffee -->
+    <div class="tab-content" id="coffee-tab">
+      <div class="grid">
+        <div class="card">
+          <h3>Specialty coffee business</h3>
+          <p>
+            Co-owner of a specialty coffee shop in Madrid focused on quality, hospitality, and sustainability.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Operations & experience</h3>
+          <p>
+            Supplier relationships, menu design, workflow optimization, and customer experience.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Community</h3>
+          <p>
+            Events, tastings, and collaborations that connect coffee with culture and music.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Music -->
+    <div class="tab-content" id="music-tab">
+      <div class="grid">
+        <div class="card">
+          <h3>Double bass</h3>
+          <p>
+            Professional training in double bass, with experience in ensemble and collaborative projects.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Creative practice</h3>
+          <p>
+            Music as a discipline of listening, structure, and improvisation.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Cross-disciplinary thinking</h3>
+          <p>
+            Applying musical principles—timing, harmony, adaptability—to product and business.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="container" id="projects" aria-labelledby="projects-title">
+    <h2 class="section-title" id="projects-title">Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Image Integrity Checker</h3>
+        <p class="muted">Software launch · Integrity and compliance in scientific imaging</p>
+        <p>Defined product strategy and go‑to‑market, contributing to sustained hardware revenue growth and improved customer trust.</p>
+      </article>
+      <article class="card">
+        <h3>ImageQuant TL v11</h3>
+        <p class="muted">Lifecycle management · Pricing · Global release</p>
+        <p>Led roadmap and pricing for a major version upgrade, coordinating R&amp;D and commercial teams worldwide.</p>
+      </article>
+      <article class="card">
+        <h3>South Europe imaging expansion</h3>
+        <p class="muted">Sales specialist · Spain, Italy, Portugal</p>
+        <p>Achieved market share growth and delivered training, demos, and post‑sales support for academic, biotech, and pharma clients.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="container" id="coffee" aria-labelledby="coffee-title">
+    <h2 class="section-title" id="coffee-title">Specialty coffee</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Our café in Madrid</h3>
+        <p>Co‑owner of a specialty coffee shop focused on craft, hospitality, and community. From sourcing to service, we chase clarity in flavor and experience.</p>
+      </div>
+      <div class="card">
+        <h3>Operations & experience</h3>
+        <p>Menu design, supplier relationships, and customer journey — applying product thinking to hospitality.</p>
+      </div>
+      <div class="card">
+        <h3>Community & events</h3>
+        <p>Tastings, music sessions, and collaborations that connect people around coffee, culture, and care.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="music" aria-labelledby="music-title">
+    <h2 class="section-title" id="music-title">Music</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Double bass</h3>
+        <p>Professional degree in double bass. I bring the discipline of classical training and the openness of ensemble work to product and teams.</p>
+      </div>
+      <div class="card">
+        <h3>Projects & collaborations</h3>
+        <p>From chamber groups to small ensembles and café sessions — music as a practice of listening and building together.</p>
+      </div>
+      <div class="card">
+        <h3>Why music matters</h3>
+        <p>Music teaches patterns, timing, and resonance — the same qualities that help products find their audience.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="contact" aria-labelledby="contact-title">
+    <h2 class="section-title" id="contact-title">Contact</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Reach out</h3>
+        <p>Email: <a id="email-link" href="#" aria-label="Send email">
+           <span id="email-text">[email protected]</span>
+        </a></p>
+        <p>Location: Madrid, Spain</p>
+      </div>
+      <div class="card">
+        <h3>Social</h3>
+        <div class="social">
+          <a href="https://www.linkedin.com/in/carmen-lozano-abellán/" target="_blank" rel="noopener"> my LinkedIn</a>
+          <a href="https://github.com/menchule" aria-label="GitHub" target="_blank" rel="noopener" >my GitHub</a>
+          <a href="https://www.instagram.com/carmenchulerenchu/" target="_blank" rel="noopener"> my Instagram</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Work together</h3>
+        <p>Open to collaborations in product strategy, digital health, specialty coffee projects, and music.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <small>© <span id="year"></span> Carmen Lozano Abellán</small>
+    <small class="muted">Built with curiosity — science, entrepreneurship, and art.</small>
+  </div>
+</footer>
+
+<script>
+  // Set current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<script>
+  (function(){
+    function rot13(str){
+      return str.replace(/[a-zA-Z]/g,function(c){
+        return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);
+      });
+    }
+
+    var obfuscated = "pnezraybmnabn@tznvy.pbz";
+    var decoded = rot13(obfuscated);
+
+    var link = document.getElementById('email-link');
+    var text = document.getElementById('email-text');
+    if (link) link.setAttribute('href', 'mailto:' + decoded);
+    if (text) text.textContent = decoded;
+
+    // Also inject into JSON-LD script
+    var ld = document.getElementById('ldjson-protected');
+    if (ld) {
+      try {
+        var json = JSON.parse(ld.textContent);
+        json.email = 'mailto:' + decoded;
+        ld.textContent = JSON.stringify(json);
+      } catch(e) {}
+    }
+  })();
+</script>
+
+
+<script>
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const target = button.dataset.tab;
+
+      tabButtons.forEach(b => b.classList.remove('active'));
+      tabContents.forEach(c => c.classList.remove('active'));
+
+      button.classList.add('active');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
+<script>
+  (function() {
+    var ws = new WebSocket('ws://' + window.location.host +
+            '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+            'referrer=' + encodeURIComponent(window.location.pathname));
+    ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+        window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+        var messageId = msg.data.substring(11);
+        var links = document.getElementsByTagName('link');
+        for (var i = 0; i < links.length; i++) {
+          var link = links[i];
+          if (link.rel !== 'stylesheet') continue;
+          var clonedLink = link.cloneNode(true);
+          var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+          if (newHref !== link.href) {
+            clonedLink.href = newHref;
+          }
+          else {
+            var indexOfQuest = newHref.indexOf('?');
+            if (indexOfQuest >= 0) {
+              // to support ?foo#hash
+              clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' +
+                      newHref.substring(indexOfQuest + 1);
+            }
+            else {
+              clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+            }
+          }
+          link.replaceWith(clonedLink);
+        }
+      }
+    };
+  })();
+</script>

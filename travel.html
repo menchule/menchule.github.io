@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Travel & Culture — Carmen Lozano Abellán</title>
+
+  <meta name="description" content="Exploring cultures, perspectives, and ways of thinking. Travel as a driver for international mindset and professional growth." />
+  <meta name="author" content="Carmen Lozano Abellán" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f1216;
+      --card: #151922;
+      --text: #e9edf5;
+      --muted: #a8b0c0;
+      --accent: #4fd1c5;
+      --link: #7aa2ff;
+      --border: #222838;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(15,18,22,0.85);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand { font-weight: 700; }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 760px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--card), #121621);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .photos img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      aspect-ratio: 1 / 1;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 860px) {
+      .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="brand">Carmen Lozano Abellán</div>
+    <div>
+      <a href="index_blue.html">← Back to profile</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="container hero">
+    <h1>Travel & cultural curiosity</h1>
+    <p>
+      Exploring other cultures is more than a personal passion — it is a professional asset.
+      Travel sharpens my international mindset, improves how I collaborate across borders,
+      and helps me understand how context shapes decisions, markets, and people.
+    </p>
+  </section>
+
+  <!-- TEXT -->
+  <section class="container grid grid-2">
+    <div class="card">
+      <h2 class="section-title">Why it matters</h2>
+      <p>
+        Working in international environments requires more than language skills.
+        It demands cultural awareness, adaptability, and the ability to read between the lines.
+        Experiencing different countries and ways of living has trained me to navigate
+        complexity with empathy and perspective.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Beyond work</h2>
+      <p>
+        I am naturally curious about how people live, create, and connect.
+        From food and music to daily routines and social dynamics,
+        travel continuously feeds my creativity and my way of thinking —
+        both personally and professionally.
+      </p>
+    </div>
+  </section>
+
+  <!-- PHOTOS -->
+  <section class="container">
+    <h2 class="section-title">Moments & places</h2>
+
+    <div class="grid grid-3 photos">
+      <!-- Replace src with your own images -->
+      <img src="photos/1_Tokyo_temple.JPEG" alt="Travel moment 1">
+      <img src="photos/2_Bangkok_templo.JPEG" alt="Travel moment 2">
+      <img src="photos/3_Cuba_hotel.JPEG" alt="Travel moment 3">
+      <img src="photos/4_Singapur_fuente.JPEG" alt="Travel moment 4">
+      <img src="photos/5_Uzbekistan.JPEG" alt="Travel moment 5">
+      <img src="photos/6_Kiruna_perros.JPEG" alt="Travel moment 6">
+      <!-- Add two more if you want 8 -->
+      <!-- <img src="images/travel7.jpg" alt="Travel moment 7">
+      <img src="images/travel8.jpg" alt="Travel moment 8"> -->
+    </div>
+
+    <p class="muted" style="margin-top:1rem;">
+      A small selection of places that shaped my perspective.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <small>© <span id="year"></span> Carmen Lozano Abellán</small>
+    <small>Curiosity as a long-term strategy.</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

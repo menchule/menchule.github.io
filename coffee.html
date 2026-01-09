@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>lift & latte — Specialty Coffee in Madrid</title>
+
+  <meta name="description" content="Lift & Latte is a specialty coffee shop in Madrid focused on quality, hospitality, and community. Coffee with intention." />
+  <meta name="author" content="Carmen Lozano Abellán" />
+  <link rel="canonical" href="https://www.liftandlatte.es" /> <br>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0f1216;
+      --card: #151922;
+      --text: #e9edf5;
+      --muted: #a8b0c0;
+      --accent: #4fd1c5;
+      --link: #7aa2ff;
+      --border: #222838;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(15,18,22,0.85);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand { font-weight: 700; }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2.5rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 720px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--card), #121621);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .muted { color: var(--muted); }
+
+    .manifesto {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .photos img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 860px) {
+      .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="brand">lift & latte</div>
+    <div>
+      <a href="index_blue.html">← Back to profile</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="container hero">
+    <h1>lift & latte</h1>
+    <p>
+      I am co-owner of lift & latte, a specialty coffee project born from our passion
+      for coffee, training, and building intentional communities.
+      <br> We bring together specialty coffee and weightlifting under one shared mindset:
+      take care of what you consume, how you move, and who you surround yourself with.
+    </p>
+    <p>
+      <a href="https://www.liftandlatte.es" target="_blank" rel="noopener">www.liftandlatte.es</a> ·  <br>
+      <a href="https://www.instagram.com/lift_and_latte_madrid/" target="_blank" rel="noopener">
+         @lift_and_latte_madrid
+      </a>
+    </p>
+  </section>
+
+  <!-- MANIFESTO & MISSION -->
+  <section class="container grid grid-2">
+    <div class="card">
+      <h2 class="section-title">Manifesto</h2>
+      <p class="manifesto">
+        We believe coffee is a craft, not a commodity.<br><br>
+        Every cup tells a story — of origin, people, and process.
+        We value clarity over noise, care over speed, and relationships over transactions.
+        lift & latte exists to slow things down, to do things properly,
+        and to create a space where coffee, movement, and care coexist naturally.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">Mission</h2>
+      <p class="manifesto">
+        Our mission is to serve exceptional specialty coffee while creating a welcoming,
+        thoughtful environment for a community that values training, health, and craft.
+        Coffee is part of the routine — not a reward, not a cheat.
+      </p>
+      <p class="muted">
+        Product thinking, applied to hospitality.
+      </p>
+    </div>
+    <section class="container">
+      <div class="card">
+        <h2 class="section-title">Why coffee & weightlifting</h2>
+        <p class="manifesto">
+          Specialty coffee and weightlifting share the same foundations:
+          discipline, consistency, respect for process, and community.
+          <br>At lift & latte we don’t separate performance from pleasure —
+          we design a space where both belong.
+        </p>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- PHOTOS -->
+  <section class="container">
+    <h2 class="section-title">Life at lift & latte</h2>
+
+    <div class="grid grid-3 photos">
+      <img src="photos/eventos.jpeg" alt="events by lift & latte">
+      <img src="photos/liftlatteboth.jpg" alt="owners at lift & latte">
+      <img src="photos/home_setup.jpeg" alt="coffee at home">
+    </div>
+
+
+    <p class="muted" style="margin-top:1rem;">
+      Follow our daily life, events, and coffee stories on Instagram.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <small>© <span id="year"></span> lift & latte</small>
+    <small>Specialty coffee · Madrid</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
