@@ -133,14 +133,7 @@
 
 <body>
 
-<header>
-  <nav class="nav">
-    <div class="brand">lift & latte</div>
-    <div>
-      <a href="index.html">← Back to profile</a>
-    </div>
-  </nav>
-</header>
+<div id="site-header"></div>
 
 <main>
 
@@ -222,6 +215,14 @@
     <small>Specialty coffee · Madrid</small>
   </div>
 </footer>
+
+<script>
+  fetch("header.html")
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("site-header").innerHTML = html;
+          });
+</script>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();

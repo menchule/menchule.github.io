@@ -8,6 +8,9 @@
   <meta name="description" content="Product Manager in digital health and molecular imaging. Co-owner of a specialty coffee shop in Madrid. Professional double bass player. Projects blending science, business, and art." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
   <style>
     :root {
       --bg: #0f1216;
@@ -127,18 +130,7 @@
 <link rel="canonical" href="https://TU_USUARIO.github.io/">
 
 <body>
-<header>
-  <nav class="nav" aria-label="Primary">
-    <div class="brand">Carmen Lozano Abellán</div>
-    <div class="menu">
-      <a href="resume.html">Resume</a>
-      <a href="coffee.html">Coffee</a>
-      <a href="music.html">Music</a>
-      <a href="travel.html">Travel</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-</header>
+<div id="site-header"></div>
 
 <main>
   <section class="container hero" id="home">
@@ -345,7 +337,7 @@
         <p>Email: <a id="email-link" href="#" aria-label="Send email">
            <span id="email-text">[email protected]</span>
         </a></p>
-        <p>Location: Madrid, Spain</p>
+        <p>Location: Madrid & Cádiz, Spain</p>
       </div>
       <div class="card">
         <h3>Social</h3>
@@ -369,6 +361,14 @@
     <small class="muted">Built with curiosity — science, entrepreneurship, and art.</small>
   </div>
 </footer>
+
+<script>
+  fetch("header.html")
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("site-header").innerHTML = html;
+          });
+</script>
 
 <script>
   // Set current year

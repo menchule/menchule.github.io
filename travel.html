@@ -126,14 +126,7 @@
 
 <body>
 
-<header>
-  <nav class="nav">
-    <div class="brand">Carmen Lozano Abellán</div>
-    <div>
-      <a href="index.html">← Back to profile</a>
-    </div>
-  </nav>
-</header>
+<div id="site-header"></div>
 
 <main>
 
@@ -200,6 +193,14 @@
     <small>Curiosity as a long-term strategy.</small>
   </div>
 </footer>
+
+<script>
+  fetch("header.html")
+          .then(res => res.text())
+          .then(html => {
+            document.getElementById("site-header").innerHTML = html;
+          });
+</script>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
